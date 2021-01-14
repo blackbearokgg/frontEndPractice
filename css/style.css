@@ -629,6 +629,7 @@ header .container ul li button {
 }
 
 #shopping .container #shopApp .products {
+  width: 100%;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -1000,7 +1001,7 @@ footer p {
   padding: 10px 20px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1280px) {
   .container {
     width: 375px;
   }
