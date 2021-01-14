@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrontEnd practice</title>
+    <!-- swiper css -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- main css style -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- intro -->
+    <!-- <div class="intro">
+        <div class="intro-text">
+            <h1 class="hide">
+                <span class="text"> JavaSrcipt, SCSS</span>
+            </h1>
+            <h1 class="hide">
+                <span class="text">Jquery & Vue </span>
+            </h1>
+            <h1 class="hide">
+                <span class="text">mobile RWD.</span>
+            </h1>
+        </div>
+    </div>
+    <div class="slider"></div> -->
+    <!-- nav -->
+    <header class="w-100">
+        <div class="container">
+            <div class="profile">
+                <div class="profile_photo background_img"
+                    style="background-image: url('./images/Path_of_Exile_Logo.png');"></div>
+                <div class="profile_name">
+                    <p>Yu-Hsien, Liu's</p>
+                    <p>FrontEnd practice</p>
+                </div>
+            </div>
+            <div class="btn-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-btn">
+                <li><button onclick="location.href='#'" class="fill">Home</button></li>
+                <li><button onclick="location.href='#fetch-1'" class="pulse">Fetch</button></li>
+                <li><button onclick="location.href='#vue-2'" class="offset">Vue</button></li>
+                <li><button onclick="location.href='#working-3'" class="close">Cart</button></li>
+            </ul>
+        </div>
+    </header>
+    <!-- showCase1 -->
+    <div id="countdownTimer" class="vh-100 background_img" style="background-image: url('./images/pexels-simon-matzinger-1323550.jpg');">
+        <div class="container">
+            <h1>CountdownTimer <br>Road to Next Year 2022</h1>
+            <div class="countdown_box">
+                <div class="count_group">
+                    <p class="count_number" id="days">0</p>
+                    <span>days</span>
+                </div>
+                <div class="count_group">
+                    <p class="count_number" id="hours">0</p>
+                    <span>hours</span>
+                </div>
+                <div class="count_group">
+                    <p class="count_number" id="minutes">0</p>
+                    <span>minutes</span>
+                </div>
+                <div class="count_group">
+                    <p class="count_number" id="seconds">0</p>
+                    <span>seconds</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- parallax -->
+    <div class="parallax background_img" style="background-image: url('./images/pexels-louis-2101187.jpg');">
+        <div class="parallax_mask"></div>
+        <div class="parallax_text">
+            <h3>
+                "It's not that I'm so smart, it's just that I stay with problems longer."
+                <br> - Albert Einstein, Physicist
+            </h3>
+        </div>
+    </div>
+    <!-- showcase2 -->
+    <div id="weatherForcast">
+        <div id="fetch-1" class="fake-anchor"></div>
+        <div class="blur_mask background_img w-100 h-100" style="background-image: url('./images/fog-forest.jpg');"></div>
+        <div class="container">
+            <h2 class="w-100">Taiwan Weather API + async + fetch</h2>
+            <div class="weather_btn">
+                <div class="btn_group">
+                    <div class="w_btn active" data-id="臺北市">臺<br>北<br>市</div>
+                    <div class="w_btn" data-id="臺中市">臺<br>中<br>市</div>
+                    <div class="w_btn" data-id="高雄市">高<br>雄<br>市</div>
+                    <div class="w_btn" data-id="花蓮縣">花<br>蓮<br>縣</div>
+                    <div class="w_btn" data-id="金門縣">金<br>門<br>縣</div>
+                    <div class="w_btn" data-id="澎湖縣">澎<br>湖<br>縣</div>
+                </div>
+            </div>
+            <div class="weatherBox">
+                <!-- weatherCard -->
+            </div><!-- weatherBox -->
+            <div class="freepik">Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+        </div><!-- container -->
+    </div>
+    <!-- swiper -->
+    <div id="swiper-box">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image:url(./images/dog-1.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(./images/dog-2.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(./images/dog-3.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(./images/dog-4.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(./images/dog-5.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(./images/dog-6.jpg)"></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <p>dog picture from : <a href="https://pixabay.com/" title="Pixabay">Pixabay</a></p>
+        </div>
+    </div>
+    <!-- showcase3 -->
+    <div id="weatherVuePractice">
+        <div id="vue-2" class="fake-anchor"></div>
+        <div class="background_mask w-100 h-100 background_img" style="background-image: url('./images/taipei-city.jpg');"></div>
+        <div class="container">
+            <h2>
+                Vue + weatherAPI
+            </h2>
+            <span>
+                各縣市12小時天氣預報
+            </span>
+            <div id="app">
+                <form class="search_box" v-on:submit.prevent="getWeather">
+                    <input type="text" class="search_bar" placeholder=" 搜尋 (ex: 臺北市.臺中市.高雄市.....)" 
+                    v-model="citySearch"
+                    autocomplete="off"
+                    onfocus="this.value=''">
+                </form>
+                <h1 v-if="cityFound">no city found <br> or you spell it wrong</h1>
+                <div class="weather_card" v-if='visible'>
+                    <div class="card_top">
+                        <p>臺灣: {{weather.cityName}}</p>
+                    </div>
+                    <div class="card_body w-100">
+                        <div class="card_body_mid">
+                            <img v-bind:src="imgUrl" alt="">
+                            <p> {{weather.description}} </p>
+                        </div>
+                        <div class="temp_group">
+                            <p>最高溫度: {{weather.maxTemp}} ℃</p>
+                            <p>最低溫度: {{weather.minTemp}} ℃</p>
+                        </div>
+                    </div>
+                    <div class="card_bottom w-100">
+                        <div class="card_bottom_left">
+                            <h3> {{weather.weatherWx}} </h3>
+                            <p>天氣現象</p>
+                        </div>
+                        <div class="card_bottom_right">
+                            <h3>{{weather.rainPop}} %</h3>
+                            <p>降雨機率</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="freepik">Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+        </div>
+    </div>
+    <!-- parallax -->
+    <div class="parallax background_img" style="background-image: url('./images/coffee.jpg');">
+        <div class="parallax_mask"></div>
+        <div class="parallax_text">
+            <h3>
+                "The person who was holding me back from my happiness was me." 
+                <br> - Keanu Reeves
+            </h3>
+        </div>
+    </div>
+    <!-- showcase4-->
+    <div id="shopping">
+        <div id="working-3" class="fake-anchor"></div>
+        <div class="container">
+            <h1>Vue Component : <br>product & shopping cart</h1>
+            <div id="shopApp">
+                <products :products-Data="productsData" :cart="cart" :cart-sub-total="cartSubTotal" :tax="tax" :cart-total="cartTotal"></products>
+                <cart :cart="cart" :cart-sub-total="cartSubTotal" :tax="tax":cart-total="cartTotal" :check-out-bool="checkoutBool"></cart>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="w-100">
+        <p>
+            2021 site only for practice
+        </p>
+        <p>
+            email : blackbearzx@gmail.com
+        </p>
+    </footer>
+    <!-- jquery -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <!-- Vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- swiper -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- gasp -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+      integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+      crossorigin="anonymous"
+    ></script>
+    <!-- JS -->
+    <script src="./JS/script.js"></script>
+</body>
+
+</html>

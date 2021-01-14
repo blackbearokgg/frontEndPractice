@@ -1,0 +1,135 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+$colors: (
+    fill: #a972cb,
+    pulse: #ef6eae, 
+    offset: #19bc8b,
+    close: #ff7f82, 
+);
+
+@each $button, $color in $colors {
+    .#{$button} {
+        --color: #{$color};
+        --hover: #{adjust-hue($color, 45deg)};
+    }
+}
+
+
+
+button{  
+    color: var(--color);
+    transition: 0.25s;
+    &:hover,
+    &:focus { 
+        border-color: var(--hover);
+        color: #fff;
+    }
+}
+
+.fill:hover,
+.fill:focus {
+    box-shadow: inset 0 0 0 2em var(--hover);
+}
+
+// Animate the size, outside
+.pulse:hover, 
+.pulse:focus {
+    animation: pulse 1s;
+    box-shadow: 0 0 0 2em rgba(#fff,0);
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 var(--hover); }
+}
+
+// Multiple shadows, one on the outside, another on the inside
+.offset {  
+    box-shadow: 
+    0.3em 0.3em 0 0 var(--color),
+    inset 0.3em 0.3em 0 0 var(--color);
+    &:hover,
+    &:focus {
+      box-shadow: 
+        0 0 0 0 var(--hover),
+        inset 6em 3.5em 0 0 var(--hover);
+    }
+}
+
+// Stack multiple shadows, one from the left, the other from the right
+.close:hover,
+.close:focus {
+    box-shadow: 
+    inset -3.5em 0 0 0 var(--hover),
+    inset 3.5em 0 0 0 var(--hover);  
+}
+
+.container{
+    width: 1280px;
+    margin: auto;
+}
+
+.w-100{
+    width: 100%;
+}
+
+.h-100{
+    height: 100%;
+}
+
+.vh-100{
+    height: 100vh;
+}
+
+.w-100container{
+    width: 100%;
+}
+
+.background_img{
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+}
+
+.fake-anchor{
+    width: 60px;
+    height: 60px;
+    background-color: tomato;
+    position: absolute;
+    left: 0;
+    top: -65px;
+    visibility: hidden;
+}
+
+.grarscale-1{
+    filter: grayscale(1);
+}
+
+.swiper-pagination-bullet-active{
+    background: lightgreen;
+}
+
+%product_btn{
+    // appearance: none;
+    padding: 8px;
+    margin: 10px 0;
+    background: white;
+    border: 1px solid black;
+    font-size: 14px;
+    color: #000;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.3s;
+    // user-select: none;
+    box-shadow: 3px 3px 10px rgb(117, 112, 112);
+    &:hover {
+        color: white;
+        background: black;
+        border: 1px solid #fff;
+    }
+}

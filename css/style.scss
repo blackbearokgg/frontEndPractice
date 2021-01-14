@@ -1,0 +1,1003 @@
+@import 'mainStyle';
+
+
+
+.intro {
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    .hide {
+        overflow: hidden;
+        span{
+            transform: translateY(100%);
+            display: inline-block;    
+        }
+    }
+}
+
+.slider {
+    background: pink;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    z-index: 3;
+}
+
+.intro-text {
+    color: rgb(233, 233, 233);
+    font-family: "Heebo", sans-serif;
+    font-size: 3rem;
+}
+
+
+.parallax{
+    position: relative;
+    height: 350px;
+    background-attachment: fixed;
+    .parallax_mask{
+        height: 350px;
+        background: brown;
+        opacity: 0.3;
+    }
+    .parallax_text{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        padding: 20px 30px;
+        background-color: rgba($color: white, $alpha: 0.8);
+        border-radius: 3px;
+        h3{
+            text-align: right;
+            font-weight: 500;
+        }
+    }
+}
+
+#swiper-box{
+    font-size: 14px;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: #000;
+    background: rgb(3, 20, 5);
+    .swiper-container {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        .swiper-wrapper{
+            .swiper-slide {
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 400px;
+                height: 300px;
+                -webkit-box-reflex: below 1px linear-gradient(transparent,#0006);
+            }
+            
+        }
+        p{
+            padding-top: 10px;
+            text-align: center;
+            color: pink;
+            a{
+                text-decoration: none;
+                color: lightgreen;
+            }
+        }
+    }
+}
+
+.change_header{
+    padding: 0 10px;
+    background-color: rgba(0, 0, 0, $alpha: 0.9);
+    color: #ffffff;
+    .container{
+        ul{
+            li{
+                a{
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 40px 0;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, $alpha: 0.0);
+    color:black;
+    transition: 0.3s;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 65px;
+        padding: 0 40px;
+        .profile{
+            display: flex;
+            align-items: center;
+            .profile_photo{
+                width: 60px;
+                height: 60px;
+                margin-right: 15px;
+                border-radius: 30px;
+            }
+            .profile_name{
+                font-size: 18px;
+            }
+        }
+        ul{
+            display: flex;
+            list-style: none;
+            li{
+                padding: 0 10px;
+                button{
+                    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                    width: 100px;
+                    padding: 10px 5px;
+                    text-decoration: none;
+                    font-size: 22px ;
+                    font-weight: 900;
+                    border-radius: 10px;
+                    background-color: black;
+                }
+            }
+        }
+    }
+}
+
+#countdownTimer{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h1{
+            padding: 0 0 20px;
+            font-size: 50px;
+            font-weight: 500;
+            text-align: center;
+            color: darkred;
+        }
+        .countdown_box{
+            display: flex;
+            text-align: center;
+            .count_group{
+                padding: 0 30px;
+                .count_number{
+                    font-size: 50px;
+                    font-weight: bold;
+                    color: rgb(255, 248, 51);
+                }
+                span{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+
+#weatherForcast{
+    position: relative;
+    .blur_mask{
+        position: absolute;
+        z-index: -1;
+        filter: blur(2px);
+    }
+    .container{
+        min-height: calc(100vh - 60px);
+        h2{
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 32px;
+            color: darkslategray;
+        }
+        .weather_btn{
+            display: flex;
+            justify-content: center;
+            .btn_group{
+                display: flex;
+                justify-content: space-between;
+                padding: 0 0 10px;
+                width: 375px;
+                .w_btn{
+                    padding: 10px 20px;
+                    border-radius: 5px;
+                    color: white;
+                    background-color: darkslategray;
+                    &:hover{
+                        color: darkslategray;
+                        background-color: yellowgreen;
+                        transition: 0.3s;
+                        transform: translate(0, -10%);
+                    }
+                    &.active{
+                        color: darkslategray;
+                        background-color: yellowgreen;
+                    }
+                }
+            }
+        }
+        .weatherBox{
+            display: flex;
+            justify-content: center;
+            padding: 0 0 50px;
+            .weatherCard{
+                width: 500px;
+                padding: 20px 30px;
+                border-radius: 10px;
+                background: rgba($color: rgb(1, 66, 1), $alpha: 0.8);
+                color: white;
+                .card_head{
+                    .weatherLocation{
+                        padding: 10px 0;
+                        border-radius: 10px;
+                        background:rgba($color: rgb(1, 56, 1), $alpha: 0.8);
+                        text-align: center;
+                        p{
+                            font-size: 28px;
+                        }
+                    }
+                }
+                .card_body{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 15px 0;
+                    .card_body_icon{
+                        img{
+                            width: 70px;
+                            height: auto;
+                        }
+                    }
+                    .card_body_text{
+                        padding: 10px 20px;
+                        text-align: center;
+                    }
+                }
+                .card_foot{
+                    ul{
+                        padding: 10px 0 20px;
+                        list-style: none;
+                        border-radius: 10px;
+                        background: rgba($color: rgb(243, 244, 245), $alpha: 0.2);
+                        li{
+                            display: flex;
+                            flex-direction: column;
+                            padding: 10px 0 0;
+                            align-items: center;
+                            h3{
+                                padding: 10px 0 0;
+                            }
+                            p{
+                                text-align: center;
+                            }
+                            .hour_icon{
+                                width: 60px;
+                                height: 60px;
+                                background: white;
+                            }
+                        }
+                    }
+                }
+            }
+        } // weatherBox
+        .freepik{
+            float: right;
+            background-color: rgba($color: rgb(243, 244, 245), $alpha: 0.5);
+        }
+    }
+}
+
+.display-none{
+    display: none;
+}
+
+#weatherVuePractice{
+    position: relative;
+    min-height: 70vh;
+    .background_mask{
+        position: absolute;
+        background-position: top center;
+        z-index: -1;
+        filter: brightness(.9) saturate(2.5) blur(2px);
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        h2{
+            margin-bottom: 10px;
+            font-size: 36px;
+            color: rgb(6, 43, 154);
+            text-shadow: 2px 2px rgb(153, 202, 233);
+        }
+        span{
+            margin-bottom: 10px;
+            font-size: 22px;
+            font-weight: bold;
+            text-shadow: 2px 2px lightgray;
+        }
+        #app{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 30px;
+            .search_box{
+                margin-bottom: 30px;
+                input{
+                    width: 300px;
+                    padding: 15px 5px 15px 20px;
+                    outline: none;
+                    text-shadow: 0 0 3px black;
+                    text-decoration: none;
+                    border: 1px solid lightgray;
+                    border-radius: 25px;
+                    box-shadow: 5px 5px 3px black;
+                }
+            }
+            h1{
+                padding: 10px 20px;
+                text-align: center;
+                color: skyblue;
+                border-radius: 25px;
+                background-color: rgba($color: black, $alpha: 0.7);
+            }
+            .weather_card{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 500px;
+                padding: 20px 20px;
+                border-radius: 25px;
+                box-shadow: 5px 5px 25px 10px black;
+                color: white;
+                background-color: rgba($color: rgb(2, 10, 59), $alpha: 0.7);
+                .card_top{
+                    p{
+                        font-size: 30px;
+                        padding: 0 20px 20px;
+                    }
+                }
+                .card_body{
+                    .card_body_mid{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        img{
+                            width: 300px;
+                            height: 330px;
+                            padding: 20px 0;
+                        }
+                        p{
+                            font-size: 26px;
+                            padding: 10px;
+                        }
+                    }
+                    .temp_group{
+                        display: flex;
+                        justify-content: space-around;
+                        P{
+                            padding: 10px;
+                        }
+                    }
+                }
+                .card_bottom{
+                    display: flex;
+                    justify-content: space-around;
+                    text-align: center;
+                    .card_bottom_left{
+                        width: 50%;
+                        h3{
+                            padding: 20px 0 0;
+                            font-size: 26px;
+                        }
+                        p{
+                            padding: 10px;
+                        }
+                    }
+                    .card_bottom_right{
+                        width: 50%;
+                        h3{
+                            padding: 20px 0 0;
+                            font-size: 26px;
+                        }
+                        p{
+                            padding: 10px 0;
+                        }
+                    }
+                }
+            }
+        }
+        .freepik{
+            background-color: rgba($color: rgb(243, 244, 245), $alpha: 0.5);
+        }
+    }
+}
+
+#shopping{
+    position: relative;
+    width: 100%;
+    background-color: orange;
+    .container{
+        // min-height: 50vh;
+        background-color: gold;
+        h1{
+            // width: 100%;
+            text-align: center;
+            padding: 20px 0;
+            text-shadow: 5px 5px orange;
+        }
+        #shopApp{
+            width: 100%;
+            .products{
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                .product_card{
+                    padding: 20px 20px 0;
+                    margin-bottom: 20px;
+                    border-radius: 5px;
+                    border: 0.5px solid rgb(233, 198, 2);
+                    box-shadow: 10px 10px 10px black;
+                    .card_image{
+                        position: relative;
+                        width: 300px;
+                        height: 300px;
+                        overflow: hidden;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                        border-radius: 5px;
+                        // border-top-left-radius: 5px;
+                        // border-top-right-radius: 5px;
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background: rgba(0,0,0,0.5);
+                            opacity: 0;
+                            transition: all 0.25s;
+                        }
+                        &:after {
+                            content: "more...";
+                            position: absolute;
+                            top: 250%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            font-size: 5em;
+                            color: white;
+                            pointer-events: none;
+                            text-shadow: 0 0 5px rgba(0,0,0,0.5), 0 0 10px rgba(0,0,0,0.5); 
+                            transition: all 0.25s;
+                        }
+                        &:hover {
+                            box-shadow: 0 12px 15px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+                            &:before {
+                              opacity: 1;
+                            }
+                            &:after {
+                              top: 50%;
+                            }
+                        }
+                    }
+                    .card_text{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        h3{
+                            font-size: 26px;
+                            text-shadow: 1px 1px orange;
+                        }
+                        p{
+                            font-size: 16px;
+                        }
+                        .productPrice{
+                            padding: 5px 0 0;
+                            font-size: 18px;
+                            font-weight: bold;
+                        }
+                        button{
+                            @extend %product_btn;
+                        }
+                    } // cardtext
+                } // productCard
+            } // products
+            .productModal{
+                position: relative;
+                
+                .overlay{
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 2;
+                    background: rgba($color: black, $alpha: 0.7);
+                }
+                .modal{
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    width: 375px;
+                    border-radius: 5px;
+                    background: white;
+                    z-index: 3;
+                    p{
+                        width: 100%;
+                        height: 25px;
+                        text-align: right;
+                        z-index: 4;
+                        span{
+                            padding: 0 10px 4px;
+                            font-weight: bold;
+                            font-size: 22px;
+                            cursor: pointer;
+                            // background-color: lightskyblue;
+                        }
+                    }
+                    .imageContainer{
+                        width: 330px;
+                        height: 330px;
+                        margin-bottom: 10px;
+                        overflow: hidden;
+                        .image{
+                            width: 100%;
+                            height: 100%;
+                            background-position: center;
+                            cursor: crosshair;
+                        }
+                    }
+                    .moreImages{
+                        display: flex;
+                        justify-content: space-between;
+                        // flex-wrap: wrap;
+                        width: 100%;
+                        height: 70px;
+                        padding: 0 20px;
+                        margin-bottom: 10px;
+                        .additionImage{
+                            width: 20%;
+                            height: auto;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            cursor: pointer;
+                        }
+                    }
+                    .modalText{
+                        width: 100%;
+                        position: relative;
+                        padding: 0 20px;
+                        .prev_product,.next_product{
+                            position: absolute;
+                            top: 10px;
+                            display: inline-flex;
+                            padding: 5px;
+                            font-weight: bold;
+                            color: seashell;
+                            background-color: seagreen;
+                            cursor: pointer;
+                            user-select: none;
+                        }
+                        .prev_product{
+                            left: 0;
+                            text-shadow: 1px 2px 1px black;
+                            box-shadow: 1px 2px 5px black;
+
+                        }
+                        .next_product{
+                            right: 0;
+                            text-shadow: -1px 2px 1px black;
+                            box-shadow: -1px 2px 5px black;
+                        }
+                        h3{
+                            margin-bottom: 5px;
+                            text-align: center;
+                        }
+                        p{
+                            margin-bottom: 5px;
+                            text-align: center;
+                        }
+                        .detail{
+                            margin-bottom: 10px;
+                        }
+                        .price{
+                            text-align: center;
+                            font-weight: bold;
+                        }
+                    }
+                    .addCart{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-around;
+                        width: 100%;
+                        padding: 0 20px 0;
+                        label{
+                            margin-left: 5px;
+                        }
+                        input{
+                            height: 35px;
+                            margin-right: 5px;
+                            padding: 0 10px
+                        }
+                        button{
+                            @extend %product_btn;
+                        }
+                    }
+                } // modal
+            } // productModal
+            .cart{
+                opacity: 0;
+                position: fixed;
+                bottom: 3%;
+                right: 5%;
+                // padding: 0px ;
+                z-index: 5;
+                transform: translate(3%,5%);
+                border-radius: 25px;
+                background: rgba($color: #fff, $alpha: 0.9);
+                &.op-1{
+                    opacity: 1;
+                }
+                .cart-image{
+                    position: relative;
+                    float: right;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 25px;
+                    // background: rgba($color: #fff, $alpha: 0.1);
+                    .image{
+                        width: 70%;
+                        height: 70%;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                    }
+                    .cart_quantity{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        padding: 0 2px;
+                        transform: translate(-50%,-50%);
+                        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                        border-radius: 50px;
+                        font-size: 22px;
+                        color: red;
+                        background: rgba($color: white, $alpha: 0.6);
+                    }
+                }
+                table{
+                    clear: both;
+                    padding: 0 10px 10px;
+                    // border-bottom: 1px solid black;
+                    tbody{
+                        tr{
+                            td{
+                                display: flex;
+                                align-items: center;
+                                .image{
+                                    position: relative;
+                                    margin-right: 10px;
+                                    width: 70px;
+                                    height: 70px;
+                                    background-size: cover;
+                                    background-repeat: no-repeat;
+                                    background-position: center;
+                                    cursor: pointer;
+                                    &:after{
+                                        content: '';
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        width: 100%;
+                                        height: 100%;
+                                        background: rgba($color: black, $alpha: 0.6);
+                                        opacity: 0;
+                                        transition: 0.3s;
+                                    }
+                                    &:hover{
+                                        &:after{
+                                            opacity: 1;
+                                        }
+                                    }
+                                    p{
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 50%;
+                                        font-size: 50px;
+                                        color: white;
+                                        transform: translate(-50%,-50%);
+                                        text-shadow: 2px 2px 2px wheat;
+                                        z-index: 2;
+                                    }
+                                }
+                                span{
+                                    padding: 15px;
+                                    background: black;
+                                    color: white;
+                                    cursor: pointer;
+                                    user-select: none;
+                                    &:hover{
+                                        background: white;
+                                        color: black;
+                                    }
+                                }
+                                .quantity{
+                                    padding: 0 15px;
+                                }
+                                .name{
+                                    padding: 15px;
+                                }
+                                .price{
+                                    padding: 0 15px 0 0;
+                                }
+                            }
+                        }
+                    }
+                } // table
+                .total{
+                    padding: 10px 30px 10px 0;
+                    text-align: right;
+                    border-top: 1px solid black;
+                    font-weight: bold;
+                    color: green;
+                    text-shadow: 2px 2px 5px lightseagreen;
+                }
+                button{
+                    @extend %product_btn;
+                    margin-left: 15px;
+                }
+            } // cart
+        } // shopApp
+    } // container
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    min-height: 60px;
+    background: black;
+    color: white;
+    p{
+        padding: 10px 20px;
+    }
+}
+
+@media screen and (max-width:768px){
+    .container{
+        width: 375px;
+    }
+
+    .parallax{
+        min-height: 300px;
+        .parallax_mask{
+            min-height: 300px;
+            padding: 10px;
+        }
+        .parallax_text{
+            width: 300px;
+        }
+    }
+
+    .change_header{
+        padding: 5px 0;
+        color: #ffffff;
+    }
+
+    header{
+        .container{
+            position: relative;
+            display: flex;
+            .btn-menu{
+                position: absolute;
+                right: 5px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 60px;
+                height: 100%;
+                background-color: rgba($color: black, $alpha: 0.7);
+                padding-top: 10px;
+                span{
+                    width: 25px;
+                    height: 10px;
+                    border-top: 1px solid white;
+                    pointer-events: none;
+                }
+            }
+            ul{
+                display: none;
+                position: absolute;
+                top: 65px;
+                right: 3px;
+                z-index: 3;
+                &.display-block{
+                    display: block;
+                }
+                li{
+                    padding: 0 10px;
+                    a{
+                        text-decoration: none;
+                        font-size: 28px;
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+
+    #countdownTimer{
+        .container{
+            h1{
+                font-size: 36px;
+                font-weight: 500;
+                text-align: center;
+                color: darkred;
+            }
+            .countdown_box{
+                display: flex;
+                text-align: center;
+                .count_group{
+                    padding: 0 15px;
+                    .count_number{
+                        font-weight: bold;
+                        color: rgb(255, 248, 51);
+                    }
+                    span{
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+    #weatherForcast{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        .blur_mask{
+            position: absolute;
+            z-index: -1;
+            filter: blur(2px);
+        }
+        .container{
+            min-height: calc(100vh - 60px);
+            h2{
+                padding: 10px;
+                text-align: center;
+                font-size: 32px;
+                color: darkslategray;
+            }
+            .weather_btn{
+                .btn_group{
+                    padding: 0 0 10px;
+                    width: 350px;
+                    .w_btn{
+                        padding: 5px 15 px;
+                        border-radius: 5px;
+                        color: white;
+                        background-color: darkslategray;
+                        &:hover{
+                            color: darkslategray;
+                            background-color: yellowgreen;
+                            transition: 0.3s;
+                            transform: translate(0, -10%);
+                        }
+                        &.active{
+                            color: darkslategray;
+                            background-color: yellowgreen;
+                        }
+                    }
+                }
+            }
+            .weatherBox{
+                padding: 0 0 10px;
+                .weatherCard{
+                    width: 330px;
+                    padding: 10px;
+                    border-radius: 10px;
+                    .card_head{
+                        .weatherLocation{
+                            padding: 10px 0;
+                            border-radius: 10px;
+                            p{
+                                font-size: 22px;
+                            }
+                        }
+                    }
+                    .card_body{
+                        
+                        padding: 5px 0 5px;
+                        .card_body_icon{
+                            img{
+                                width: 60px;
+                                height: auto;
+                            }
+                        }
+                        .card_body_text{
+                            padding: 10px 20px;
+                            text-align: center;
+                        }
+                    }
+                    .card_foot{
+                        ul{
+                            padding: 0 0 10px;
+                            list-style: none;
+                            border-radius: 10px;
+                            background: rgba($color: rgb(243, 244, 245), $alpha: 0.2);
+                            li{
+                                display: flex;
+                                flex-direction: column;
+                                padding: 10px 0 0;
+                                align-items: center;
+                                
+                                p{
+                                    text-align: center;
+                                }
+                                .hour_icon{
+                                    width: 60px;
+                                    height: 60px;
+                                    background: white;
+                                }
+                            }
+                        }
+                    }
+                }
+            } // weatherBox
+        }
+    }
+
+    #weatherVuePractice{
+        min-height: unset;
+        .container{
+            #app{
+                .weather_card{
+                    width: 300px;
+                    .card_body{
+                        .card_body_mid{
+                            img{
+                                width: 200px;
+                                height: auto;
+                                padding: 0 0 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

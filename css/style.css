@@ -1,0 +1,1178 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+.fill {
+  --color: #a972cb;
+  --hover: #cb72aa;
+}
+
+.pulse {
+  --color: #ef6eae;
+  --hover: #ef8f6e;
+}
+
+.offset {
+  --color: #19bc8b;
+  --hover: #1973bc;
+}
+
+.close {
+  --color: #ff7f82;
+  --hover: #ffdc7f;
+}
+
+button {
+  color: var(--color);
+  transition: 0.25s;
+}
+
+button:hover, button:focus {
+  border-color: var(--hover);
+  color: #fff;
+}
+
+.fill:hover,
+.fill:focus {
+  box-shadow: inset 0 0 0 2em var(--hover);
+}
+
+.pulse:hover,
+.pulse:focus {
+  animation: pulse 1s;
+  box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+
+.offset {
+  box-shadow: 0.3em 0.3em 0 0 var(--color), inset 0.3em 0.3em 0 0 var(--color);
+}
+
+.offset:hover, .offset:focus {
+  box-shadow: 0 0 0 0 var(--hover), inset 6em 3.5em 0 0 var(--hover);
+}
+
+.close:hover,
+.close:focus {
+  box-shadow: inset -3.5em 0 0 0 var(--hover), inset 3.5em 0 0 0 var(--hover);
+}
+
+.container {
+  width: 1280px;
+  margin: auto;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.vh-100 {
+  height: 100vh;
+}
+
+.w-100container {
+  width: 100%;
+}
+
+.background_img {
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+}
+
+.fake-anchor {
+  width: 60px;
+  height: 60px;
+  background-color: tomato;
+  position: absolute;
+  left: 0;
+  top: -65px;
+  visibility: hidden;
+}
+
+.grarscale-1 {
+  filter: grayscale(1);
+}
+
+.swiper-pagination-bullet-active {
+  background: lightgreen;
+}
+
+#shopping .container #shopApp .products .product_card .card_text button, #shopping .container #shopApp .productModal .modal .addCart button, #shopping .container #shopApp .cart button {
+  padding: 8px;
+  margin: 10px 0;
+  background: white;
+  border: 1px solid black;
+  font-size: 14px;
+  color: #000;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.3s;
+  box-shadow: 3px 3px 10px #757070;
+}
+
+#shopping .container #shopApp .products .product_card .card_text button:hover, #shopping .container #shopApp .productModal .modal .addCart button:hover, #shopping .container #shopApp .cart button:hover {
+  color: white;
+  background: black;
+  border: 1px solid #fff;
+}
+
+.intro {
+  background: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.intro .hide {
+  overflow: hidden;
+}
+
+.intro .hide span {
+  transform: translateY(100%);
+  display: inline-block;
+}
+
+.slider {
+  background: pink;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  z-index: 3;
+}
+
+.intro-text {
+  color: #e9e9e9;
+  font-family: "Heebo", sans-serif;
+  font-size: 3rem;
+}
+
+.parallax {
+  position: relative;
+  height: 350px;
+  background-attachment: fixed;
+}
+
+.parallax .parallax_mask {
+  height: 350px;
+  background: brown;
+  opacity: 0.3;
+}
+
+.parallax .parallax_text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px 30px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 3px;
+}
+
+.parallax .parallax_text h3 {
+  text-align: right;
+  font-weight: 500;
+}
+
+#swiper-box {
+  font-size: 14px;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: #000;
+  background: #031405;
+}
+
+#swiper-box .swiper-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#swiper-box .swiper-container .swiper-wrapper .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 400px;
+  height: 300px;
+  -webkit-box-reflex: below 1px linear-gradient(transparent, #0006);
+}
+
+#swiper-box .swiper-container p {
+  padding-top: 10px;
+  text-align: center;
+  color: pink;
+}
+
+#swiper-box .swiper-container p a {
+  text-decoration: none;
+  color: lightgreen;
+}
+
+.change_header {
+  padding: 0 10px;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #ffffff;
+}
+
+.change_header .container ul li a {
+  color: #ffffff;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 40px 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0);
+  color: black;
+  transition: 0.3s;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 65px;
+  padding: 0 40px;
+}
+
+header .container .profile {
+  display: flex;
+  align-items: center;
+}
+
+header .container .profile .profile_photo {
+  width: 60px;
+  height: 60px;
+  margin-right: 15px;
+  border-radius: 30px;
+}
+
+header .container .profile .profile_name {
+  font-size: 18px;
+}
+
+header .container ul {
+  display: flex;
+  list-style: none;
+}
+
+header .container ul li {
+  padding: 0 10px;
+}
+
+header .container ul li button {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  width: 100px;
+  padding: 10px 5px;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 900;
+  border-radius: 10px;
+  background-color: black;
+}
+
+#countdownTimer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#countdownTimer .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#countdownTimer .container h1 {
+  padding: 0 0 20px;
+  font-size: 50px;
+  font-weight: 500;
+  text-align: center;
+  color: darkred;
+}
+
+#countdownTimer .container .countdown_box {
+  display: flex;
+  text-align: center;
+}
+
+#countdownTimer .container .countdown_box .count_group {
+  padding: 0 30px;
+}
+
+#countdownTimer .container .countdown_box .count_group .count_number {
+  font-size: 50px;
+  font-weight: bold;
+  color: #fff833;
+}
+
+#countdownTimer .container .countdown_box .count_group span {
+  font-size: 18px;
+}
+
+#weatherForcast {
+  position: relative;
+}
+
+#weatherForcast .blur_mask {
+  position: absolute;
+  z-index: -1;
+  filter: blur(2px);
+}
+
+#weatherForcast .container {
+  min-height: calc(100vh - 60px);
+}
+
+#weatherForcast .container h2 {
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 32px;
+  color: darkslategray;
+}
+
+#weatherForcast .container .weather_btn {
+  display: flex;
+  justify-content: center;
+}
+
+#weatherForcast .container .weather_btn .btn_group {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 10px;
+  width: 375px;
+}
+
+#weatherForcast .container .weather_btn .btn_group .w_btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  background-color: darkslategray;
+}
+
+#weatherForcast .container .weather_btn .btn_group .w_btn:hover {
+  color: darkslategray;
+  background-color: yellowgreen;
+  transition: 0.3s;
+  transform: translate(0, -10%);
+}
+
+#weatherForcast .container .weather_btn .btn_group .w_btn.active {
+  color: darkslategray;
+  background-color: yellowgreen;
+}
+
+#weatherForcast .container .weatherBox {
+  display: flex;
+  justify-content: center;
+  padding: 0 0 50px;
+}
+
+#weatherForcast .container .weatherBox .weatherCard {
+  width: 500px;
+  padding: 20px 30px;
+  border-radius: 10px;
+  background: rgba(1, 66, 1, 0.8);
+  color: white;
+}
+
+#weatherForcast .container .weatherBox .weatherCard .card_head .weatherLocation {
+  padding: 10px 0;
+  border-radius: 10px;
+  background: rgba(1, 56, 1, 0.8);
+  text-align: center;
+}
+
+#weatherForcast .container .weatherBox .weatherCard .card_head .weatherLocation p {
+  font-size: 28px;
+}
+
+#weatherForcast .container .weatherBox .weatherCard .card_body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+}
+
+#weatherForcast .container .weatherBox .weatherCard .card_body .card_body_icon img {
+  width: 70px;
+  height: auto;
+}
+
+#weatherForcast .container .weatherBox .weatherCard .card_body .card_body_text {
+  padding: 10px 20px;
+  text-align: center;
+}
+
+#weatherForcast .container .weatherBox .weatherCard .card_foot ul {
+  padding: 10px 0 20px;
+  list-style: none;
+  border-radius: 10px;
+  background: rgba(243, 244, 245, 0.2);
+}
+
+#weatherForcast .container .weatherBox .weatherCard .card_foot ul li {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0 0;
+  align-items: center;
+}
+
+#weatherForcast .container .weatherBox .weatherCard .card_foot ul li h3 {
+  padding: 10px 0 0;
+}
+
+#weatherForcast .container .weatherBox .weatherCard .card_foot ul li p {
+  text-align: center;
+}
+
+#weatherForcast .container .weatherBox .weatherCard .card_foot ul li .hour_icon {
+  width: 60px;
+  height: 60px;
+  background: white;
+}
+
+#weatherForcast .container .freepik {
+  float: right;
+  background-color: rgba(243, 244, 245, 0.5);
+}
+
+.display-none {
+  display: none;
+}
+
+#weatherVuePractice {
+  position: relative;
+  min-height: 70vh;
+}
+
+#weatherVuePractice .background_mask {
+  position: absolute;
+  background-position: top center;
+  z-index: -1;
+  filter: brightness(0.9) saturate(2.5) blur(2px);
+}
+
+#weatherVuePractice .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+
+#weatherVuePractice .container h2 {
+  margin-bottom: 10px;
+  font-size: 36px;
+  color: #062b9a;
+  text-shadow: 2px 2px #99cae9;
+}
+
+#weatherVuePractice .container span {
+  margin-bottom: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  text-shadow: 2px 2px lightgray;
+}
+
+#weatherVuePractice .container #app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+#weatherVuePractice .container #app .search_box {
+  margin-bottom: 30px;
+}
+
+#weatherVuePractice .container #app .search_box input {
+  width: 300px;
+  padding: 15px 5px 15px 20px;
+  outline: none;
+  text-shadow: 0 0 3px black;
+  text-decoration: none;
+  border: 1px solid lightgray;
+  border-radius: 25px;
+  box-shadow: 5px 5px 3px black;
+}
+
+#weatherVuePractice .container #app h1 {
+  padding: 10px 20px;
+  text-align: center;
+  color: skyblue;
+  border-radius: 25px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#weatherVuePractice .container #app .weather_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  padding: 20px 20px;
+  border-radius: 25px;
+  box-shadow: 5px 5px 25px 10px black;
+  color: white;
+  background-color: rgba(2, 10, 59, 0.7);
+}
+
+#weatherVuePractice .container #app .weather_card .card_top p {
+  font-size: 30px;
+  padding: 0 20px 20px;
+}
+
+#weatherVuePractice .container #app .weather_card .card_body .card_body_mid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#weatherVuePractice .container #app .weather_card .card_body .card_body_mid img {
+  width: 300px;
+  height: 330px;
+  padding: 20px 0;
+}
+
+#weatherVuePractice .container #app .weather_card .card_body .card_body_mid p {
+  font-size: 26px;
+  padding: 10px;
+}
+
+#weatherVuePractice .container #app .weather_card .card_body .temp_group {
+  display: flex;
+  justify-content: space-around;
+}
+
+#weatherVuePractice .container #app .weather_card .card_body .temp_group P {
+  padding: 10px;
+}
+
+#weatherVuePractice .container #app .weather_card .card_bottom {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+#weatherVuePractice .container #app .weather_card .card_bottom .card_bottom_left {
+  width: 50%;
+}
+
+#weatherVuePractice .container #app .weather_card .card_bottom .card_bottom_left h3 {
+  padding: 20px 0 0;
+  font-size: 26px;
+}
+
+#weatherVuePractice .container #app .weather_card .card_bottom .card_bottom_left p {
+  padding: 10px;
+}
+
+#weatherVuePractice .container #app .weather_card .card_bottom .card_bottom_right {
+  width: 50%;
+}
+
+#weatherVuePractice .container #app .weather_card .card_bottom .card_bottom_right h3 {
+  padding: 20px 0 0;
+  font-size: 26px;
+}
+
+#weatherVuePractice .container #app .weather_card .card_bottom .card_bottom_right p {
+  padding: 10px 0;
+}
+
+#weatherVuePractice .container .freepik {
+  background-color: rgba(243, 244, 245, 0.5);
+}
+
+#shopping {
+  position: relative;
+  width: 100%;
+  background-color: orange;
+}
+
+#shopping .container {
+  background-color: gold;
+}
+
+#shopping .container h1 {
+  text-align: center;
+  padding: 20px 0;
+  text-shadow: 5px 5px orange;
+}
+
+#shopping .container #shopApp {
+  width: 100%;
+}
+
+#shopping .container #shopApp .products {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+#shopping .container #shopApp .products .product_card {
+  padding: 20px 20px 0;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 0.5px solid #e9c602;
+  box-shadow: 10px 10px 10px black;
+}
+
+#shopping .container #shopApp .products .product_card .card_image {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+#shopping .container #shopApp .products .product_card .card_image:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: all 0.25s;
+}
+
+#shopping .container #shopApp .products .product_card .card_image:after {
+  content: "more...";
+  position: absolute;
+  top: 250%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5em;
+  color: white;
+  pointer-events: none;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5), 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.25s;
+}
+
+#shopping .container #shopApp .products .product_card .card_image:hover {
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+#shopping .container #shopApp .products .product_card .card_image:hover:before {
+  opacity: 1;
+}
+
+#shopping .container #shopApp .products .product_card .card_image:hover:after {
+  top: 50%;
+}
+
+#shopping .container #shopApp .products .product_card .card_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#shopping .container #shopApp .products .product_card .card_text h3 {
+  font-size: 26px;
+  text-shadow: 1px 1px orange;
+}
+
+#shopping .container #shopApp .products .product_card .card_text p {
+  font-size: 16px;
+}
+
+#shopping .container #shopApp .products .product_card .card_text .productPrice {
+  padding: 5px 0 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#shopping .container #shopApp .productModal {
+  position: relative;
+}
+
+#shopping .container #shopApp .productModal .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+#shopping .container #shopApp .productModal .modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 375px;
+  border-radius: 5px;
+  background: white;
+  z-index: 3;
+}
+
+#shopping .container #shopApp .productModal .modal p {
+  width: 100%;
+  height: 25px;
+  text-align: right;
+  z-index: 4;
+}
+
+#shopping .container #shopApp .productModal .modal p span {
+  padding: 0 10px 4px;
+  font-weight: bold;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+#shopping .container #shopApp .productModal .modal .imageContainer {
+  width: 330px;
+  height: 330px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+#shopping .container #shopApp .productModal .modal .imageContainer .image {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  cursor: crosshair;
+}
+
+#shopping .container #shopApp .productModal .modal .moreImages {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 70px;
+  padding: 0 20px;
+  margin-bottom: 10px;
+}
+
+#shopping .container #shopApp .productModal .modal .moreImages .additionImage {
+  width: 20%;
+  height: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+#shopping .container #shopApp .productModal .modal .modalText {
+  width: 100%;
+  position: relative;
+  padding: 0 20px;
+}
+
+#shopping .container #shopApp .productModal .modal .modalText .prev_product, #shopping .container #shopApp .productModal .modal .modalText .next_product {
+  position: absolute;
+  top: 10px;
+  display: inline-flex;
+  padding: 5px;
+  font-weight: bold;
+  color: seashell;
+  background-color: seagreen;
+  cursor: pointer;
+  user-select: none;
+}
+
+#shopping .container #shopApp .productModal .modal .modalText .prev_product {
+  left: 0;
+  text-shadow: 1px 2px 1px black;
+  box-shadow: 1px 2px 5px black;
+}
+
+#shopping .container #shopApp .productModal .modal .modalText .next_product {
+  right: 0;
+  text-shadow: -1px 2px 1px black;
+  box-shadow: -1px 2px 5px black;
+}
+
+#shopping .container #shopApp .productModal .modal .modalText h3 {
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+#shopping .container #shopApp .productModal .modal .modalText p {
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+#shopping .container #shopApp .productModal .modal .modalText .detail {
+  margin-bottom: 10px;
+}
+
+#shopping .container #shopApp .productModal .modal .modalText .price {
+  text-align: center;
+  font-weight: bold;
+}
+
+#shopping .container #shopApp .productModal .modal .addCart {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  padding: 0 20px 0;
+}
+
+#shopping .container #shopApp .productModal .modal .addCart label {
+  margin-left: 5px;
+}
+
+#shopping .container #shopApp .productModal .modal .addCart input {
+  height: 35px;
+  margin-right: 5px;
+  padding: 0 10px;
+}
+
+#shopping .container #shopApp .cart {
+  opacity: 0;
+  position: fixed;
+  bottom: 3%;
+  right: 5%;
+  z-index: 5;
+  transform: translate(3%, 5%);
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+#shopping .container #shopApp .cart.op-1 {
+  opacity: 1;
+}
+
+#shopping .container #shopApp .cart .cart-image {
+  position: relative;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+}
+
+#shopping .container #shopApp .cart .cart-image .image {
+  width: 70%;
+  height: 70%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#shopping .container #shopApp .cart .cart-image .cart_quantity {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 0 2px;
+  transform: translate(-50%, -50%);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border-radius: 50px;
+  font-size: 22px;
+  color: red;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+#shopping .container #shopApp .cart table {
+  clear: both;
+  padding: 0 10px 10px;
+}
+
+#shopping .container #shopApp .cart table tbody tr td {
+  display: flex;
+  align-items: center;
+}
+
+#shopping .container #shopApp .cart table tbody tr td .image {
+  position: relative;
+  margin-right: 10px;
+  width: 70px;
+  height: 70px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+#shopping .container #shopApp .cart table tbody tr td .image:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+#shopping .container #shopApp .cart table tbody tr td .image:hover:after {
+  opacity: 1;
+}
+
+#shopping .container #shopApp .cart table tbody tr td .image p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%, -50%);
+  text-shadow: 2px 2px 2px wheat;
+  z-index: 2;
+}
+
+#shopping .container #shopApp .cart table tbody tr td span {
+  padding: 15px;
+  background: black;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+}
+
+#shopping .container #shopApp .cart table tbody tr td span:hover {
+  background: white;
+  color: black;
+}
+
+#shopping .container #shopApp .cart table tbody tr td .quantity {
+  padding: 0 15px;
+}
+
+#shopping .container #shopApp .cart table tbody tr td .name {
+  padding: 15px;
+}
+
+#shopping .container #shopApp .cart table tbody tr td .price {
+  padding: 0 15px 0 0;
+}
+
+#shopping .container #shopApp .cart .total {
+  padding: 10px 30px 10px 0;
+  text-align: right;
+  border-top: 1px solid black;
+  font-weight: bold;
+  color: green;
+  text-shadow: 2px 2px 5px lightseagreen;
+}
+
+#shopping .container #shopApp .cart button {
+  margin-left: 15px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  min-height: 60px;
+  background: black;
+  color: white;
+}
+
+footer p {
+  padding: 10px 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 375px;
+  }
+  .parallax {
+    min-height: 300px;
+  }
+  .parallax .parallax_mask {
+    min-height: 300px;
+    padding: 10px;
+  }
+  .parallax .parallax_text {
+    width: 300px;
+  }
+  .change_header {
+    padding: 5px 0;
+    color: #ffffff;
+  }
+  header .container {
+    position: relative;
+    display: flex;
+  }
+  header .container .btn-menu {
+    position: absolute;
+    right: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding-top: 10px;
+  }
+  header .container .btn-menu span {
+    width: 25px;
+    height: 10px;
+    border-top: 1px solid white;
+    pointer-events: none;
+  }
+  header .container ul {
+    display: none;
+    position: absolute;
+    top: 65px;
+    right: 3px;
+    z-index: 3;
+  }
+  header .container ul.display-block {
+    display: block;
+  }
+  header .container ul li {
+    padding: 0 10px;
+  }
+  header .container ul li a {
+    text-decoration: none;
+    font-size: 28px;
+    color: black;
+  }
+  #countdownTimer .container h1 {
+    font-size: 36px;
+    font-weight: 500;
+    text-align: center;
+    color: darkred;
+  }
+  #countdownTimer .container .countdown_box {
+    display: flex;
+    text-align: center;
+  }
+  #countdownTimer .container .countdown_box .count_group {
+    padding: 0 15px;
+  }
+  #countdownTimer .container .countdown_box .count_group .count_number {
+    font-weight: bold;
+    color: #fff833;
+  }
+  #countdownTimer .container .countdown_box .count_group span {
+    font-size: 18px;
+  }
+  #weatherForcast {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  #weatherForcast .blur_mask {
+    position: absolute;
+    z-index: -1;
+    filter: blur(2px);
+  }
+  #weatherForcast .container {
+    min-height: calc(100vh - 60px);
+  }
+  #weatherForcast .container h2 {
+    padding: 10px;
+    text-align: center;
+    font-size: 32px;
+    color: darkslategray;
+  }
+  #weatherForcast .container .weather_btn .btn_group {
+    padding: 0 0 10px;
+    width: 350px;
+  }
+  #weatherForcast .container .weather_btn .btn_group .w_btn {
+    padding: 5px 15 px;
+    border-radius: 5px;
+    color: white;
+    background-color: darkslategray;
+  }
+  #weatherForcast .container .weather_btn .btn_group .w_btn:hover {
+    color: darkslategray;
+    background-color: yellowgreen;
+    transition: 0.3s;
+    transform: translate(0, -10%);
+  }
+  #weatherForcast .container .weather_btn .btn_group .w_btn.active {
+    color: darkslategray;
+    background-color: yellowgreen;
+  }
+  #weatherForcast .container .weatherBox {
+    padding: 0 0 10px;
+  }
+  #weatherForcast .container .weatherBox .weatherCard {
+    width: 330px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  #weatherForcast .container .weatherBox .weatherCard .card_head .weatherLocation {
+    padding: 10px 0;
+    border-radius: 10px;
+  }
+  #weatherForcast .container .weatherBox .weatherCard .card_head .weatherLocation p {
+    font-size: 22px;
+  }
+  #weatherForcast .container .weatherBox .weatherCard .card_body {
+    padding: 5px 0 5px;
+  }
+  #weatherForcast .container .weatherBox .weatherCard .card_body .card_body_icon img {
+    width: 60px;
+    height: auto;
+  }
+  #weatherForcast .container .weatherBox .weatherCard .card_body .card_body_text {
+    padding: 10px 20px;
+    text-align: center;
+  }
+  #weatherForcast .container .weatherBox .weatherCard .card_foot ul {
+    padding: 0 0 10px;
+    list-style: none;
+    border-radius: 10px;
+    background: rgba(243, 244, 245, 0.2);
+  }
+  #weatherForcast .container .weatherBox .weatherCard .card_foot ul li {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0 0;
+    align-items: center;
+  }
+  #weatherForcast .container .weatherBox .weatherCard .card_foot ul li p {
+    text-align: center;
+  }
+  #weatherForcast .container .weatherBox .weatherCard .card_foot ul li .hour_icon {
+    width: 60px;
+    height: 60px;
+    background: white;
+  }
+  #weatherVuePractice {
+    min-height: unset;
+  }
+  #weatherVuePractice .container #app .weather_card {
+    width: 300px;
+  }
+  #weatherVuePractice .container #app .weather_card .card_body .card_body_mid img {
+    width: 200px;
+    height: auto;
+    padding: 0 0 10px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
