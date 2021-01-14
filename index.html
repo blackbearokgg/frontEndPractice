@@ -188,7 +188,7 @@
             <h1>Vue Component : <br>product & shopping cart</h1>
             <div id="shopApp">
                 <products :products-Data="productsData" :cart="cart" :cart-sub-total="cartSubTotal" :tax="tax" :cart-total="cartTotal"></products>
-                <cart :cart="cart" :cart-sub-total="cartSubTotal" :tax="tax":cart-total="cartTotal" :check-out-bool="checkoutBool"></cart>
+                <cart :cart-qty="cartQty" :cart="cart" :cart-sub-total="cartSubTotal" :tax="tax":cart-total="cartTotal" :check-out-bool="checkoutBool"></cart>
             </div>
         </div>
     </div>

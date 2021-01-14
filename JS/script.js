@@ -362,7 +362,7 @@ Vue.component('products', {
                 </div>
                 <div class="addCart">
                     <label for="modalAmount">QTY</label>
-                    <input id="modalAmount" value="modalAmount" v-model="modalAmount" @keyup.enter="modalAddToCart(modalData),hideModal()" type="number" min="1" max="99">
+                    <input id="modalAmount" value="1" v-model="modalAmount" @keyup.enter="modalAddToCart(modalData),hideModal()" type="number" min="1" max="99">
                     <button @click="modalAddToCart(modalData), hideModal()"> Add to Cart</button>
                 </div>
             </div>
