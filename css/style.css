@@ -457,9 +457,8 @@ header .container ul li button {
   background: white;
 }
 
-#weatherForcast .container .freepik {
-  float: right;
-  background-color: rgba(243, 244, 245, 0.5);
+#weatherForcast .container .weatherBox .weatherCard .freepik {
+  text-align: center;
 }
 
 .display-none {
@@ -622,10 +621,6 @@ header .container ul li button {
   text-align: center;
   padding: 20px 0;
   text-shadow: 5px 5px orange;
-}
-
-#shopping .container #shopApp {
-  width: 100%;
 }
 
 #shopping .container #shopApp .products {

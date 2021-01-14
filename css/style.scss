@@ -295,12 +295,12 @@ header{
                         }
                     }
                 }
-            }
+                .freepik{
+                    text-align: center;
+                }
+            } // weatherCard
         } // weatherBox
-        .freepik{
-            float: right;
-            background-color: rgba($color: rgb(243, 244, 245), $alpha: 0.5);
-        }
+        
     }
 }
 
@@ -445,7 +445,6 @@ header{
             text-shadow: 5px 5px orange;
         }
         #shopApp{
-            width: 100%;
             .products{
                 width: 100%;
                 display: flex;
@@ -998,8 +997,4 @@ footer{
             }
         }
     }
-
-    // #products{
-
-    // }
 }
