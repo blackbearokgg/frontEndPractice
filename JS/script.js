@@ -374,7 +374,6 @@ Vue.component('cart', {
     data: function() {
         return {
             showCart: false,
-            cartQty: 0
         }
     },
     props: ['cart', 'cartQty', 'checkoutBool', 'cartSubTotal', 'cartTotal', 'tax'],
