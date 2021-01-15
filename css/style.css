@@ -273,7 +273,7 @@ header .container ul li button {
   }
   50% {
     opacity: 1;
-    background-image: url("./images/matrix2560.jpg");
+    background-image: url("https://github.com/blackbearokgg/frontEndPractice/blob/main/images/matrix2560.jpg");
     background-position: center;
     background-attachment: fixed;
     z-index: 6;
@@ -281,7 +281,7 @@ header .container ul li button {
   100% {
     opacity: 1;
     transform: scale(1) translateY(0px);
-    background-image: url("./images/cyberpunk2560.jpg");
+    background-image: url("https://github.com/blackbearokgg/frontEndPractice/blob/main/images/cyberpunk2560.jpg");
     background-position: center;
     background-attachment: fixed;
     z-index: 6;
