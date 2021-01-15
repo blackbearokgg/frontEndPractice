@@ -154,7 +154,8 @@ button:hover, button:focus {
 
 .intro-container {
   position: relative;
-  transition: 5s;
+  transition-delay: 13s;
+  transition: 2s;
 }
 
 .intro-container .intro {

@@ -8,10 +8,10 @@ $(document).ready(function() {
     for (let e = 1; e < 200; e++) {
         blockCanvas.innerHTML += `<div class="blocks"></div>`
         blocks[e].style.animationDelay = `${e*0.05}s`
+        setTimeout(function(){
+            introCanvas.style.opacity = 0
+        }, 13000)
     };
-    setTimeout(function(){
-        introCanvas.style.opacity=0
-    }, 10000)
 });
 
 // ========Jquery==NavBar=for=RWD========
@@ -20,10 +20,9 @@ $(window).bind({
         const scrolledY = window.scrollY
         if (scrolledY > 10){
             $('header').addClass('change_header')
-            $('.cart').addClass('op-1')
+            introCanvas.style.opacity = 0
         } else {
             $('header').removeClass('change_header')
-            $('.cart').removeClass('op-1')
         }
     },
     click: function(e){
