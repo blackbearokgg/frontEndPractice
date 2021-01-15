@@ -20,9 +20,11 @@ $(window).bind({
         const scrolledY = window.scrollY
         if (scrolledY > 10){
             $('header').addClass('change_header')
+            $('.cart').addClass('op-1')
             introCanvas.style.opacity = 0
         } else {
             $('header').removeClass('change_header')
+            $('.cart').removeClass('op-1')
         }
     },
     click: function(e){
