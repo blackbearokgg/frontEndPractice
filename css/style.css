@@ -140,7 +140,7 @@ button:hover, button:focus {
     background-image: url("/frontEndPractice/images/matrix2560.jpg");
     background-position: center;
     background-attachment: fixed;
-    background-color: #012f01;
+    background-color: #034703;
   }
   100% {
     opacity: 1;
@@ -148,7 +148,7 @@ button:hover, button:focus {
     background-image: url("/frontEndPractice/images/cyberpunk2560.jpg");
     background-position: center;
     background-attachment: fixed;
-    background-color: brown;
+    background-color: black;
   }
 }
 
