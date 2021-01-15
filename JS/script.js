@@ -11,7 +11,7 @@ $(document).ready(function() {
     };
     setTimeout(function(){
         introCanvas.style.opacity=0
-    }, 9000)
+    }, 10000)
 });
 
 // ========Jquery==NavBar=for=RWD========
