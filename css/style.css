@@ -130,8 +130,81 @@ button:hover, button:focus {
   border: 1px solid #fff;
 }
 
-.imgurl {
-  background-image: url("/frontEndPractice/images/cyberpunk2560.jpg");
+.intro-container {
+  position: relative;
+  transition: 5s;
+}
+
+.intro-container .intro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+  background: #333;
+  z-index: 3;
+}
+
+.intro-container .block-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.intro-container .block-canvas .blocks {
+  position: relative;
+  display: block;
+  width: 5%;
+  height: 10%;
+  animation: animateI 0.7s ease-in-out forwards;
+  z-index: 6;
+}
+
+.intro-container .block-canvas .blocks:nth-child(even) {
+  animation: animateI 0.4s ease-in-out forwards;
+}
+
+.intro-container .block-canvas .blocks:nth-child(7n+3) {
+  animation: animateI 0.4s ease-in-out forwards;
+}
+
+.intro-container .block-canvas .blocks:nth-child(7n+7) {
+  animation: animateI 0.4s ease-in-out forwards;
+}
+
+@keyframes animateI {
+  0% {
+    opacity: 0;
+    transform: scale(0) translateY(1000px);
+  }
+  50% {
+    opacity: 1;
+    background-image: url("/frontEndPractice/images/matrix2560.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-color: orange;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0px);
+    background-image: url("/frontEndPractice/images/cyberpunk2560.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-color: brown;
+  }
 }
 
 .slider {
@@ -309,60 +382,6 @@ header .container ul li button {
 
 #countdownTimer .container .countdown_box .count_group span {
   font-size: 18px;
-}
-
-#countdownTimer .intro-container {
-  transition: 5s;
-}
-
-#countdownTimer .intro {
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-  text-align: center;
-  font-size: 50px;
-  font-weight: bold;
-  color: white;
-  background: #333;
-  z-index: 3;
-}
-
-#countdownTimer .block-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  z-index: 5;
-}
-
-#countdownTimer .block-canvas .blocks {
-  position: relative;
-  display: block;
-  width: 5%;
-  height: 10%;
-  animation: animateI 0.7s ease-in-out forwards;
-  z-index: 6;
-}
-
-#countdownTimer .block-canvas .blocks:nth-child(even) {
-  animation: animateI 0.4s ease-in-out forwards;
-}
-
-#countdownTimer .block-canvas .blocks:nth-child(7n+3) {
-  animation: animateI 0.4s ease-in-out forwards;
-}
-
-#countdownTimer .block-canvas .blocks:nth-child(7n+7) {
-  animation: animateI 0.4s ease-in-out forwards;
 }
 
 #weatherForcast {

@@ -1,8 +1,122 @@
 @import 'mainStyle';
 
-.imgurl{
-    background-image: url('/frontEndPractice/images/cyberpunk2560.jpg')
+.intro-container{
+    position: relative;
+    transition: 5s;
+    .intro{
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        font-size: 50px;
+        font-weight: bold;
+        color: white;
+        background: #333;
+        z-index: 3;
+    }
+    .block-canvas{
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        z-index: 5;
+        .blocks{
+            position: relative;
+            display: block;
+            width: 5%;
+            height: 10%;
+            animation: animateI 0.7s ease-in-out forwards;
+            z-index: 6;
+            &:nth-child(even){
+                animation: animateI 0.4s ease-in-out forwards;
+            }
+            &:nth-child(7n+3){
+                animation: animateI 0.4s ease-in-out forwards;
+            }
+            &:nth-child(7n+7){
+                animation: animateI 0.4s ease-in-out forwards;
+            }
+        }
+    }
+    @keyframes animateI{
+        0%{
+            opacity: 0;
+            transform: scale(0) translateY(1000px);
+        }
+        50%{
+            opacity: 1;
+            background-image: url('/frontEndPractice/images/matrix2560.jpg');
+            background-position: center;
+            background-attachment: fixed;
+            background-color: orange;
+        }
+        100%{
+            opacity: 1;
+            transform: scale(1) translateY(0px);
+            background-image: url('/frontEndPractice/images/cyberpunk2560.jpg');
+            background-position: center;
+            background-attachment: fixed;
+            background-color: brown;
+        }
+    }
 }
+
+
+// @-webkit-keyframes animateI{
+//     0%{
+//         opacity: 0;
+//         transform: scale(0) translateY(1000px);
+//     }
+//     50%{
+//         opacity: 1;
+//         background-image: url('/frontEndPractice/images/matrix2560.jpg');
+//         background-position: center;
+//         background-attachment: fixed;
+//         background-color: orange;
+//         // z-index: 7;
+//     }
+//     100%{
+//         opacity: 1;
+//         transform: scale(1) translateY(0px);
+//         background-image: url('/frontEndPractice/images/cyberpunk2560.jpg');
+//         background-position: center;
+//         background-attachment: fixed;
+//         background-color: brown;
+//         // z-index: 7;
+//     }
+// }
+// @keyframes animateI{
+//     0%{
+//         opacity: 0;
+//         transform: scale(0) translateY(1000px);
+//     }
+//     50%{
+//         opacity: 1;
+//         background-image: url('/frontEndPractice/images/matrix2560.jpg');
+//         background-position: center;
+//         background-attachment: fixed;
+//         background-color: orange;
+//         // z-index: 7;
+//     }
+//     100%{
+//         opacity: 1;
+//         transform: scale(1) translateY(0px);
+//         background-image: url('/frontEndPractice/images/cyberpunk2560.jpg');
+//         background-position: center;
+//         background-attachment: fixed;
+//         background-color: brown;
+//         // z-index: 7;
+//     }
+// }
 
 .slider {
     background: pink;
@@ -168,99 +282,7 @@ header{
             }
         }
     }
-    .intro-container{
-        transition: 5s;
-    }
-    .intro{
-        position: fixed;
-        top: 0;
-        left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100vh;
-        text-align: center;
-        font-size: 50px;
-        font-weight: bold;
-        color: white;
-        background: #333;
-        z-index: 3;
-    }
-    .block-canvas{
-        position: fixed;
-        top: 0;
-        left: 0;
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        height: 100vh;
-        overflow: hidden;
-        z-index: 5;
-        .blocks{
-            position: relative;
-            display: block;
-            width: 5%;
-            height: 10%;
-            animation: animateI 0.7s ease-in-out forwards;
-            z-index: 6;
-            &:nth-child(even){
-                animation: animateI 0.4s ease-in-out forwards;
-            }
-            &:nth-child(7n+3){
-                animation: animateI 0.4s ease-in-out forwards;
-            }
-            &:nth-child(7n+7){
-                animation: animateI 0.4s ease-in-out forwards;
-            }
-        }
-    }
-    // @-webkit-keyframes animateI{
-    //     0%{
-    //         opacity: 0;
-    //         transform: scale(0) translateY(1000px);
-    //     }
-    //     50%{
-    //         opacity: 1;
-    //         background-image: url('/frontEndPractice/images/matrix2560.jpg');
-    //         background-position: center;
-    //         background-attachment: fixed;
-    //         background-color: orange;
-    //         // z-index: 7;
-    //     }
-    //     100%{
-    //         opacity: 1;
-    //         transform: scale(1) translateY(0px);
-    //         background-image: url('/frontEndPractice/images/cyberpunk2560.jpg');
-    //         background-position: center;
-    //         background-attachment: fixed;
-    //         background-color: brown;
-    //         // z-index: 7;
-    //     }
-    // }
-    // @keyframes animateI{
-    //     0%{
-    //         opacity: 0;
-    //         transform: scale(0) translateY(1000px);
-    //     }
-    //     50%{
-    //         opacity: 1;
-    //         background-image: url('/frontEndPractice/images/matrix2560.jpg');
-    //         background-position: center;
-    //         background-attachment: fixed;
-    //         background-color: orange;
-    //         // z-index: 7;
-    //     }
-    //     100%{
-    //         opacity: 1;
-    //         transform: scale(1) translateY(0px);
-    //         background-image: url('/frontEndPractice/images/cyberpunk2560.jpg');
-    //         background-position: center;
-    //         background-attachment: fixed;
-    //         background-color: brown;
-    //         // z-index: 7;
-    //     }
-    // }
+    
 }
 
 #weatherForcast{
