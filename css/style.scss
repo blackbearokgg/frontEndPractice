@@ -129,6 +129,28 @@ header{
     }
 }
 
+@keyframes animate{
+    0%{
+        opacity: 0;
+        transform: scale(0) translateY(1000px);
+    }
+    50%{
+        opacity: 1;
+        background: url('/images/matrix2560.jpg');
+        background-position: center;
+        background-attachment: fixed;
+        z-index: 6;
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1) translateY(0px);
+        background: url('/images/cyberpunk2560.jpg');
+        background-position: center;
+        background-attachment: fixed;
+        z-index: 6;
+    }
+}
+
 #countdownTimer{
     position: relative;
     display: flex;
@@ -163,6 +185,7 @@ header{
         }
     }
     .intro-container{
+        width: 100%;
         transition: 5s;
     }
     .intro{
@@ -188,7 +211,7 @@ header{
         display: flex;
         flex-wrap: wrap;
         width: 100%;
-        height: 100%;
+        height: 100vh;
         overflow: hidden;
         z-index: 5;
         .blocks{
@@ -197,6 +220,7 @@ header{
             width: 5%;
             height: 10%;
             animation: animate 0.7s ease-in-out forwards;
+            z-index: 6;
             &:nth-child(even){
                 animation: animate 0.4s ease-in-out forwards;
             }
@@ -207,30 +231,6 @@ header{
                 animation: animate 0.4s ease-in-out forwards;
             }
         }
-    }
-}
-
-@keyframes animate{
-    0%{
-        opacity: 0;
-        transform: scale(0) translateY(1000px);
-    }
-    50%{
-        opacity: 1;
-        background: url('/images/matrix2560.jpg');
-        background-position: center;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        z-index: 6;
-    }
-    100%{
-        opacity: 1;
-        transform: scale(1) translateY(0px);
-        background: url('/images/cyberpunk2560.jpg');
-        background-position: center;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        z-index: 6;
     }
 }
 
