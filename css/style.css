@@ -130,6 +130,10 @@ button:hover, button:focus {
   border: 1px solid #fff;
 }
 
+.imgurl {
+  background-image: url("/frontEndPractice/images/cyberpunk2560.jpg");
+}
+
 .slider {
   background: pink;
   position: fixed;
@@ -308,7 +312,6 @@ header .container ul li button {
 }
 
 #countdownTimer .intro-container {
-  width: 100%;
   transition: 5s;
 }
 
@@ -360,28 +363,6 @@ header .container ul li button {
 
 #countdownTimer .block-canvas .blocks:nth-child(7n+7) {
   animation: animateI 0.4s ease-in-out forwards;
-}
-
-@keyframes animateI {
-  0% {
-    opacity: 0;
-    transform: scale(0) translateY(1000px);
-  }
-  50% {
-    opacity: 1;
-    background-image: url("/frontEndPractice/images/matrix2560.jpg");
-    background-position: center;
-    background-attachment: fixed;
-    background-color: orange;
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1) translateY(0px);
-    background-image: url("/frontEndPractice/images/cyberpunk2560.jpg");
-    background-position: center;
-    background-attachment: fixed;
-    background-color: brown;
-  }
 }
 
 #weatherForcast {

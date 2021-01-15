@@ -2,13 +2,40 @@
 const introCanvas = document.querySelector('.intro-container')
 const blockCanvas = document.getElementsByClassName('block-canvas')[0]
 const blocks = document.getElementsByClassName('blocks')
+const keyFrames = document.createElement("style")
 
+keyFrames.innerHTML = `
+    @keyframes animateI{
+        0%{
+            opacity: 0;
+            transform: scale(0) translateY(1000px);
+        }
+        50%{
+            opacity: 1;
+            background-image: url('/frontEndPractice/images/matrix2560.jpg');
+            background-position: center;
+            background-attachment: fixed;
+            background-color: orange;
+            // z-index: 7;
+        }
+        100%{
+            opacity: 1;
+            transform: scale(1) translateY(0px);
+            background-image: url('/frontEndPractice/images/cyberpunk2560.jpg');
+            background-position: center;
+            background-attachment: fixed;
+            background-color: brown;
+            // z-index: 7;
+        }
+    }
+`
 
 $(document).ready(function() {
     // document is loaded and DOM is ready
     for (let e = 1; e < 200; e++) {
         blockCanvas.innerHTML += `<div class="blocks"></div>`
         blocks[e].style.animationDelay = `${e*0.05}s`
+        blocks[e].appendChild(keyFrames)
     };
     setTimeout(function(){
         introCanvas.style.opacity=0
