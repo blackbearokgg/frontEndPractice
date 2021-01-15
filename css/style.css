@@ -371,6 +371,7 @@ header .container ul li button {
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    z-index: 6;
   }
   100% {
     opacity: 1;
@@ -379,6 +380,7 @@ header .container ul li button {
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    z-index: 6;
   }
 }
 

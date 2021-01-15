@@ -6,7 +6,6 @@ const blocks = document.getElementsByClassName('blocks')
 setTimeout(function(){
     introCanvas.style.opacity=0
 }, 9000)
-console.log(blocks)
 for (let e = 1; e < 200; e++) {
     blockCanvas.innerHTML += `<div class="blocks"></div>`
     blocks[e].style.animationDelay = `${e*0.05}s`
