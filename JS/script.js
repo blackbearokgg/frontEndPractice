@@ -34,11 +34,12 @@ $(document).ready(function() {
         blocks[e].style.animationDelay = `${e*0.05}s`
         blocks[e].appendChild(keyFrames)
     };
+    setTimeout(function(){
+        introCanvas.style.opacity=0
+    }, 9000)
 });
 
-setTimeout(function(){
-    introCanvas.style.opacity=0
-}, 9000)
+
 
 
 // ========Jquery==NavBar=for=RWD========
