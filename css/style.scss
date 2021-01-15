@@ -28,6 +28,8 @@
         // opacity: 0;
         transform: scale(0.9) translateY(1000px);
         background-image: url('/frontEndPractice/images/matrix2560.jpg');
+        background-position: center;
+        background-attachment: fixed;
     }
     50%{
         opacity: 1;
