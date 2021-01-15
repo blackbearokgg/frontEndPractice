@@ -3,13 +3,18 @@ const introCanvas = document.querySelector('.intro-container')
 const blockCanvas = document.getElementsByClassName('block-canvas')[0]
 const blocks = document.getElementsByClassName('blocks')
 
-setTimeout(function(){
-    introCanvas.style.opacity=0
-}, 9000)
-for (let e = 1; e < 200; e++) {
-    blockCanvas.innerHTML += `<div class="blocks"></div>`
-    blocks[e].style.animationDelay = `${e*0.05}s`
-}
+
+$(document).ready(function() {
+    // document is loaded and DOM is ready
+    for (let e = 1; e < 200; e++) {
+        blockCanvas.innerHTML += `<div class="blocks"></div>`
+        blocks[e].style.animationDelay = `${e*0.05}s`
+    };
+    setTimeout(function(){
+        introCanvas.style.opacity=0
+    }, 9000)
+});
+
 
 // ========Jquery==NavBar=for=RWD========
 $(window).bind({

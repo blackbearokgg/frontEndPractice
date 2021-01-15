@@ -199,27 +199,27 @@ header{
             display: block;
             width: 5%;
             height: 10%;
-            animation: animate 0.7s ease-in-out forwards;
+            animation: animateI 0.7s ease-in-out forwards;
             z-index: 6;
             &:nth-child(even){
-                animation: animate 0.4s ease-in-out forwards;
+                animation: animateI 0.4s ease-in-out forwards;
             }
             &:nth-child(7n+3){
-                animation: animate 0.4s ease-in-out forwards;
+                animation: animateI 0.4s ease-in-out forwards;
             }
             &:nth-child(7n+7){
-                animation: animate 0.4s ease-in-out forwards;
+                animation: animateI 0.4s ease-in-out forwards;
             }
         }
     }
-    @-webkit-keyframes animate{
+    @-webkit-keyframes animateI{
         0%{
             opacity: 0;
             transform: scale(0) translateY(1000px);
         }
         50%{
             opacity: 1;
-            background-image: url('/images/matrix2560.jpg');
+            background-image: url('./images/matrix2560.jpg');
             background-position: center;
             background-attachment: fixed;
             background-color: orange;
@@ -228,21 +228,21 @@ header{
         100%{
             opacity: 1;
             transform: scale(1) translateY(0px);
-            background-image: url('/images/cyberpunk2560.jpg');
+            background-image: url('./images/cyberpunk2560.jpg');
             background-position: center;
             background-attachment: fixed;
             background-color: brown;
             // z-index: 7;
         }
     }
-    @keyframes animate{
+    @keyframes animateI{
         0%{
             opacity: 0;
             transform: scale(0) translateY(1000px);
         }
         50%{
             opacity: 1;
-            background-image: url('/images/matrix2560.jpg');
+            background-image: url('./images/matrix2560.jpg');
             background-position: center;
             background-attachment: fixed;
             background-color: orange;
@@ -251,7 +251,7 @@ header{
         100%{
             opacity: 1;
             transform: scale(1) translateY(0px);
-            background-image: url('/images/cyberpunk2560.jpg');
+            background-image: url('./images/cyberpunk2560.jpg');
             background-position: center;
             background-attachment: fixed;
             background-color: brown;
