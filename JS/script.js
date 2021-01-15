@@ -1,11 +1,16 @@
-// ===coolIntroAnimate==By==DevEd==
-const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
+// ======introCanvas=====
+const introCanvas = document.querySelector('.intro-container')
+const blockCanvas = document.getElementsByClassName('block-canvas')[0]
+const blocks = document.getElementsByClassName('blocks')
 
-tl.to(".text", { y: "0%", duration: 1, stagger: 0.25 });
-tl.to(".slider", { y: "-100%", duration: 1.5, delay: 0.5 });
-tl.to(".intro", { y: "-100%", duration: 1 }, "-=1");
-tl.fromTo("header", { opacity: 0 }, { opacity: 1, duration: 1 });
-tl.fromTo(".nav-btn", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
+setTimeout(function(){
+    introCanvas.style.opacity=0
+}, 9000)
+console.log(blocks)
+for (let e = 1; e < 200; e++) {
+    blockCanvas.innerHTML += `<div class="blocks"></div>`
+    blocks[e].style.animationDelay = `${e*0.05}s`
+}
 
 // ========Jquery==NavBar=for=RWD========
 $(window).bind({
@@ -491,31 +496,44 @@ const shopApp = new Vue({
                 ],
                 text: "This is a doggy",
                 details: "These are John wick'dog, don't mess up.",
-                price: 666
+                price: 7
             },
             {
                 order: 2,
                 name: "Kitten",
-                image: "background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/241793/kittens.jpg')",
+                image: "background-image: url('./images/kitten-1.jpg')",
+                images: [
+                    {image: "background-image: url('./images/kitten-1.jpg')"},
+                    {image: "background-image: url('./images/kitten-2.jpg')"},
+                    {image: "background-image: url('./images/kitten-3.jpg')"}
+                ],
                 text: "This is a kitten",
                 details: "This is where some detailes on kittens would go. Shout out kittens for being adorable.",
                 price: 10
             },
             {
                 order: 3,
-                name: "Shark",
-                image: "background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/241793/shark.jpg')",
-                text: "This is a shark",
+                name: "Shark Queen",
+                image: "background-image: url('./images/guragwar.jpg')",
+                text: "This is a Shark Queen",
                 details: "This is where some detailes on sharks would go. Damn nature, you scary.",
-                price: 15
+                price: 666
             },
             {
                 order: 4,
-                name: "Apple",
-                image: "background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/241793/apple.jpg')",
-                text: "This is an apple",
-                details: "This is where some detailes on apples would go. Shout out apples for being delicious.",
+                name: "Pasta",
+                image: "background-image: url('./images/pasta.jpg')",
+                text: "This is a Pasta",
+                details: "This is where some detailes on Pasta would go. Shout out Pasta for being delicious.",
                 price: 5
+            },
+            {
+                order: 5,
+                name: "Coffee",
+                image: "background-image: url('./images/coffee-2.jpg')",
+                text: "This is a coffee",
+                details: "This is where some detailes on coffee would go. Shout out coffee for being delicious.",
+                price: 9.9
             }
         ]
     },

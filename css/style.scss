@@ -1,25 +1,5 @@
 @import 'mainStyle';
 
-.intro {
-    background: black;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 3;
-    .hide {
-        overflow: hidden;
-        span{
-            transform: translateY(100%);
-            display: inline-block;
-        }
-    }
-}
-
 .slider {
     background: pink;
     position: fixed;
@@ -30,13 +10,6 @@
     transform: translateY(100%);
     z-index: 3;
 }
-
-.intro-text {
-    color: rgb(233, 233, 233);
-    font-family: "Heebo", sans-serif;
-    font-size: 3rem;
-}
-
 
 .parallax{
     position: relative;
@@ -189,8 +162,75 @@ header{
             }
         }
     }
+    .intro-container{
+        transition: 5s;
+    }
+    .intro{
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        font-size: 50px;
+        font-weight: bold;
+        color: white;
+        background: #333;
+        z-index: 3;
+    }
+    .block-canvas{
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: 5;
+        .blocks{
+            position: relative;
+            display: block;
+            width: 5%;
+            height: 10%;
+            animation: animate 0.7s ease-in-out forwards;
+            &:nth-child(even){
+                animation: animate 0.4s ease-in-out forwards;
+            }
+            &:nth-child(7n+3){
+                animation: animate 0.4s ease-in-out forwards;
+            }
+            &:nth-child(7n+7){
+                animation: animate 0.4s ease-in-out forwards;
+            }
+        }
+    }
 }
 
+@keyframes animate{
+    0%{
+        opacity: 0;
+        transform: scale(0) translateY(1000px);
+    }
+    50%{
+        opacity: 1;
+        background: url('../images/matrix2560.jpg');
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1) translateY(0px);
+        background: url('../images/cyberpunk2560.jpg');
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }
+}
 
 #weatherForcast{
     position: relative;
@@ -345,7 +385,8 @@ header{
                     width: 300px;
                     padding: 15px 5px 15px 20px;
                     outline: none;
-                    text-shadow: 0 0 3px black;
+                    font-weight: bold;
+                    color: black;
                     text-decoration: none;
                     border: 1px solid lightgray;
                     border-radius: 25px;
@@ -568,6 +609,7 @@ header{
                             width: 100%;
                             height: 100%;
                             background-position: center;
+                            background-repeat: no-repeat;
                             cursor: crosshair;
                         }
                     }
@@ -880,6 +922,7 @@ footer{
                 }
             }
         }
+        
     }
 
     #weatherForcast{
