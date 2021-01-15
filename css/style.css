@@ -130,6 +130,28 @@ button:hover, button:focus {
   border: 1px solid #fff;
 }
 
+@keyframes animateI {
+  0% {
+    transform: scale(0.9) translateY(1000px);
+    background-image: url("/frontEndPractice/images/matrix2560.jpg");
+  }
+  50% {
+    opacity: 1;
+    background-image: url("/frontEndPractice/images/matrix2560.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #012f01;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0px);
+    background-image: url("/frontEndPractice/images/cyberpunk2560.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-color: brown;
+  }
+}
+
 .intro-container {
   position: relative;
   transition: 5s;
@@ -183,28 +205,6 @@ button:hover, button:focus {
 
 .intro-container .block-canvas .blocks:nth-child(7n+7) {
   animation: animateI 0.4s ease-in-out forwards;
-}
-
-@keyframes animateI {
-  0% {
-    opacity: 0;
-    transform: scale(0) translateY(1000px);
-  }
-  50% {
-    opacity: 1;
-    background-image: url("/frontEndPractice/images/matrix2560.jpg");
-    background-position: center;
-    background-attachment: fixed;
-    background-color: #012f01;
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1) translateY(0px);
-    background-image: url("/frontEndPractice/images/cyberpunk2560.jpg");
-    background-position: center;
-    background-attachment: fixed;
-    background-color: brown;
-  }
 }
 
 .slider {
