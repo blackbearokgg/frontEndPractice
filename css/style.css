@@ -133,6 +133,8 @@ button:hover, button:focus {
 .intro-container {
   position: relative;
   transition: 5s;
+  background-image: url("/frpm/images/matrix2560.jpg");
+  background-image: url("/images/cyberpunk2560.jpg");
 }
 
 .intro-container .intro {
@@ -195,29 +197,7 @@ button:hover, button:focus {
     background-image: url("/frontEndPractice/images/matrix2560.jpg");
     background-position: center;
     background-attachment: fixed;
-    background-color: orange;
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1) translateY(0px);
-    background-image: url("/frontEndPractice/images/cyberpunk2560.jpg");
-    background-position: center;
-    background-attachment: fixed;
-    background-color: brown;
-  }
-}
-
-@keyframes animateI {
-  0% {
-    opacity: 0;
-    transform: scale(0) translateY(1000px);
-  }
-  50% {
-    opacity: 1;
-    background-image: url("/frontEndPractice/images/matrix2560.jpg");
-    background-position: center;
-    background-attachment: fixed;
-    background-color: orange;
+    background-color: #012f01;
   }
   100% {
     opacity: 1;

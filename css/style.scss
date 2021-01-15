@@ -3,6 +3,8 @@
 .intro-container{
     position: relative;
     transition: 5s;
+    background-image: url('/frpm/images/matrix2560.jpg');
+    background-image: url('/images/cyberpunk2560.jpg');
     .intro{
         position: fixed;
         top: 0;
@@ -36,6 +38,7 @@
             height: 10%;
             animation: animateI 0.7s ease-in-out forwards;
             z-index: 6;
+            
             &:nth-child(even){
                 animation: animateI 0.4s ease-in-out forwards;
             }
@@ -47,27 +50,7 @@
             }
         }
     }
-    @keyframes animateI{
-        0%{
-            opacity: 0;
-            transform: scale(0) translateY(1000px);
-        }
-        50%{
-            opacity: 1;
-            background-image: url('/frontEndPractice/images/matrix2560.jpg');
-            background-position: center;
-            background-attachment: fixed;
-            background-color: orange;
-        }
-        100%{
-            opacity: 1;
-            transform: scale(1) translateY(0px);
-            background-image: url('/frontEndPractice/images/cyberpunk2560.jpg');
-            background-position: center;
-            background-attachment: fixed;
-            background-color: brown;
-        }
-    }
+    
 }
 
 @keyframes animateI{
@@ -80,7 +63,7 @@
         background-image: url('/frontEndPractice/images/matrix2560.jpg');
         background-position: center;
         background-attachment: fixed;
-        background-color: orange;
+        background-color: rgb(1, 47, 1);
     }
     100%{
         opacity: 1;
@@ -93,29 +76,6 @@
 }
 
 // @-webkit-keyframes animateI{
-//     0%{
-//         opacity: 0;
-//         transform: scale(0) translateY(1000px);
-//     }
-//     50%{
-//         opacity: 1;
-//         background-image: url('/frontEndPractice/images/matrix2560.jpg');
-//         background-position: center;
-//         background-attachment: fixed;
-//         background-color: orange;
-//         // z-index: 7;
-//     }
-//     100%{
-//         opacity: 1;
-//         transform: scale(1) translateY(0px);
-//         background-image: url('/frontEndPractice/images/cyberpunk2560.jpg');
-//         background-position: center;
-//         background-attachment: fixed;
-//         background-color: brown;
-//         // z-index: 7;
-//     }
-// }
-// @keyframes animateI{
 //     0%{
 //         opacity: 0;
 //         transform: scale(0) translateY(1000px);
