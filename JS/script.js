@@ -2,9 +2,8 @@
 const introCanvas = document.querySelector('.intro-container')
 const blockCanvas = document.getElementsByClassName('block-canvas')[0]
 const blocks = document.getElementsByClassName('blocks')
-
+// 當載入網頁時，增加元素方塊
 $(document).ready(function() {
-    // document is loaded and DOM is ready
     for (let e = 1; e < 200; e++) {
         blockCanvas.innerHTML += `<div class="blocks"></div>`
         blocks[e].style.animationDelay = `${e*0.05}s`
@@ -62,7 +61,6 @@ function countdownTimer() {
     const hours = Math.floor(totalSeconds / 3600) % 24
     const minutes = Math.floor(totalSeconds / 60) % 60
     const seconds = Math.floor(totalSeconds) % 60
-    // 直接取代內文中的數字
     daysEl.innerText = days
     hoursEl.innerText = hours
     minutesEl.innerText = minutes
@@ -165,9 +163,9 @@ function rainWarning(p){
         return `<p>${p} % <br>要下大雨啦!</p>`
     } else {
         if (p > 50){
-            return `<p>${p} %< <br> 還是帶把傘吧!/p>`
+            return `<p>${p} %< <br> 還是帶把傘吧! </p>`
         } else if (p > 25) {
-            return `<p>${p} % <br> 把命運交給老天爺吧!</p>`
+            return `<p>${p} % <br> 把命運交給老天爺吧! </p>`
         } else {
             return `<p>${p} % <br> 免驚，風和日麗! </p>`
         }
@@ -284,6 +282,7 @@ Vue.component('products', {
             this.modalData = {}
             this.showModal = false
         },
+        // 如果資料有多的圖片，可以選取並更換相對應的圖片
         changeImage: function(image) {
             this.modalData.image = image
         },
@@ -310,6 +309,7 @@ Vue.component('products', {
                 }
             }
         },
+        // 加入購物車
         addToCart: function(product) {
             let found = false
             for (let i = 0; i < shopApp.cart.length; i ++) {
@@ -330,6 +330,7 @@ Vue.component('products', {
             shopApp.cartTotal = shopApp.cartSubTotal + (shopApp.tax * shopApp.cartSubTotal)
             shopApp.checkoutBool = true
         },
+        // 從彈出視窗加入購物車
         modalAddToCart: function(modalData) {
             for(let i = 0; i < this.modalAmount; i++) {
               this.addToCart(modalData);
@@ -395,6 +396,7 @@ Vue.component('cart', {
         }
     },
     methods: {
+        // 從購物車移除商品清單
         removeProduct: function(product) {
             // remove index from array
             for (let i = 0; i < shopApp.cart.length; i ++) {
@@ -418,6 +420,7 @@ Vue.component('cart', {
             shopApp.checkoutBool = false
             this.showCart = false
         },
+        // 增加或刪減商品數量
         quantityChange: function(product, direction) {
             for (let i = 0; i < shopApp.cart.length; i++) {
                 if (shopApp.cart[i].order === product.order) {
@@ -488,7 +491,7 @@ const shopApp = new Vue({
         productsData: [
             {
                 order: 1,
-                name: "Doggy",
+                name: "狗狗",
                 image: "background-image: url('./images/dog-1.jpg');",
                 images: [
                     { image: "background-image: url('./images/dog-2.jpg')" },
@@ -496,49 +499,50 @@ const shopApp = new Vue({
                     { image: "background-image: url('./images/dog-4.jpg')" },
                     { image: "background-image: url('./images/dog-5.jpg')" }
                 ],
-                text: "This is a doggy",
-                details: "These are John wick'dog, don't mess up.",
+                text: "這是一隻狗",
+                details: "這是John wick的狗, 別搞砸了!!",
                 price: 7
             },
             {
                 order: 2,
-                name: "Kitten",
+                name: "貓咪",
                 image: "background-image: url('./images/kitten-1.jpg')",
                 images: [
                     {image: "background-image: url('./images/kitten-1.jpg')"},
                     {image: "background-image: url('./images/kitten-2.jpg')"},
                     {image: "background-image: url('./images/kitten-3.jpg')"}
                 ],
-                text: "This is a kitten",
-                details: "This is where some detailes on kittens would go. Shout out kittens for being adorable.",
+                text: "這是貓咪",
+                details: "這裡會放置有關貓咪的詳細資訊，這些貓咪很可愛對吧?",
                 price: 10
             },
             {
                 order: 3,
-                name: "Shark Queen",
+                name: "鯊魚",
                 image: "background-image: url('./images/guragwar.jpg')",
-                text: "This is a Shark Queen",
-                details: "This is where some detailes on sharks would go. Damn nature, you scary.",
+                text: "小心，鯊魚!",
+                details: "這裡會放置有關鯊魚的詳細資訊，AAA.",
                 price: 666
             },
             {
                 order: 4,
-                name: "Pasta",
+                name: "義大利麵",
                 image: "background-image: url('./images/pasta.jpg')",
-                text: "This is a Pasta",
-                details: "This is where some detailes on Pasta would go. Shout out Pasta for being delicious.",
+                text: "這是義大利麵",
+                details: "這裡會放置有關義大利麵的詳細資訊，是不是看起來很可口?",
                 price: 5
             },
             {
                 order: 5,
-                name: "Coffee",
+                name: "咖啡",
                 image: "background-image: url('./images/coffee-2.jpg')",
-                text: "This is a coffee",
-                details: "This is where some detailes on coffee would go. Shout out coffee for being delicious.",
+                text: "這是咖啡",
+                details: "這裡會放置有關咖啡的詳細資訊，時間到了要不要來一杯咖啡?",
                 price: 9.9
             }
         ]
     },
+    // TODO: 結帳畫面
     // events: {
     //     "checkoutRequest": function() {
     //         vue.$broadcast("checkoutRequest");

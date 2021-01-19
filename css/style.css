@@ -1051,7 +1051,7 @@ footer p {
 
 @media screen and (max-width: 1280px) {
   .container {
-    width: 375px;
+    width: 768px;
   }
   .parallax {
     min-height: 300px;
@@ -1211,9 +1211,6 @@ footer p {
     height: 60px;
     background: white;
   }
-  #weatherVuePractice {
-    min-height: unset;
-  }
   #weatherVuePractice .container #app .weather_card {
     width: 300px;
   }
@@ -1221,6 +1218,12 @@ footer p {
     width: 200px;
     height: auto;
     padding: 0 0 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 375px;
   }
 }
 /*# sourceMappingURL=style.css.map */
