@@ -119,8 +119,8 @@
     background-attachment: fixed;
     .parallax_mask{
         height: 350px;
-        background: brown;
-        opacity: 0.3;
+        background: black;
+        opacity: 0.5;
     }
     .parallax_text{
         position: absolute;
@@ -274,7 +274,7 @@ header{
     .blur_mask{
         position: absolute;
         z-index: -1;
-        filter: blur(2px);
+        // filter: blur(1px);
     }
     .container{
         min-height: calc(100vh - 60px);
@@ -392,7 +392,7 @@ header{
         position: absolute;
         background-position: top center;
         z-index: -1;
-        filter: brightness(.9) saturate(2.5) blur(2px);
+        filter: brightness(.9) saturate(2.5);
     }
     .container{
         display: flex;
@@ -402,14 +402,15 @@ header{
         h2{
             margin-bottom: 10px;
             font-size: 36px;
-            color: rgb(6, 43, 154);
-            text-shadow: 2px 2px rgb(153, 202, 233);
+            text-shadow: 2px 2px rgb(6, 43, 154);
+            color: rgb(153, 202, 233);
         }
         span{
             margin-bottom: 10px;
             font-size: 22px;
             font-weight: bold;
-            text-shadow: 2px 2px lightgray;
+            color: royalblue;
+            text-shadow: 1px 1px purple;
         }
         #app{
             display: flex;
@@ -721,7 +722,8 @@ header{
                         input{
                             height: 35px;
                             margin-right: 5px;
-                            padding: 0 10px
+                            padding: 0 10px;
+                            border: 1px solid black;
                         }
                         button{
                             @extend %product_btn;
@@ -969,7 +971,7 @@ footer{
         .blur_mask{
             position: absolute;
             z-index: -1;
-            filter: blur(2px);
+            // filter: blur(1px);
         }
         .container{
             min-height: calc(100vh - 60px);

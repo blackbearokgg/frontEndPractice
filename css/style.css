@@ -227,8 +227,8 @@ button:hover, button:focus {
 
 .parallax .parallax_mask {
   height: 350px;
-  background: brown;
-  opacity: 0.3;
+  background: black;
+  opacity: 0.5;
 }
 
 .parallax .parallax_text {
@@ -392,7 +392,6 @@ header .container ul li button {
 #weatherForcast .blur_mask {
   position: absolute;
   z-index: -1;
-  filter: blur(2px);
 }
 
 #weatherForcast .container {
@@ -524,7 +523,7 @@ header .container ul li button {
   position: absolute;
   background-position: top center;
   z-index: -1;
-  filter: brightness(0.9) saturate(2.5) blur(2px);
+  filter: brightness(0.9) saturate(2.5);
 }
 
 #weatherVuePractice .container {
@@ -537,15 +536,16 @@ header .container ul li button {
 #weatherVuePractice .container h2 {
   margin-bottom: 10px;
   font-size: 36px;
-  color: #062b9a;
-  text-shadow: 2px 2px #99cae9;
+  text-shadow: 2px 2px #062b9a;
+  color: #99cae9;
 }
 
 #weatherVuePractice .container span {
   margin-bottom: 10px;
   font-size: 22px;
   font-weight: bold;
-  text-shadow: 2px 2px lightgray;
+  color: royalblue;
+  text-shadow: 1px 1px purple;
 }
 
 #weatherVuePractice .container #app {
@@ -898,6 +898,7 @@ header .container ul li button {
   height: 35px;
   margin-right: 5px;
   padding: 0 10px;
+  border: 1px solid black;
 }
 
 #shopping .container #shopApp .cart {
@@ -1134,7 +1135,6 @@ footer p {
   #weatherForcast .blur_mask {
     position: absolute;
     z-index: -1;
-    filter: blur(2px);
   }
   #weatherForcast .container {
     min-height: calc(100vh - 60px);
